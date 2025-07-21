@@ -1,0 +1,1093 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PH Asesoría Contable-Fiscal | Excelencia en Servicios Fiscales</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="logo.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="logo.png">
+    <link rel="shortcut icon" href="logo.png">
+    <link rel="apple-touch-icon" href="logo.png">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: {
+                            light: '#eee027',
+                            DEFAULT: '#f9f785',
+                            dark: '#d4c41f',
+                        },
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .playfair {
+            font-family: 'Playfair Display', serif;
+        }
+        .gold-gradient {
+            background: linear-gradient(135deg, #eee027 0%, #f9f785 100%);
+        }
+        .nav-link {
+            position: relative;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: #eee027;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        .section-divider {
+            height: 3px;
+            width: 80px;
+            background: #d4c41f;
+            margin: 1rem auto;
+        }
+        .service-card {
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+        }
+        .service-card:hover {
+            transform: translateY(-10px);
+            border-color: #eee027;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .pricing-card {
+            transition: all 0.3s ease;
+        }
+        .pricing-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .pricing-card.featured {
+            border: 2px solid #eee027;
+        }
+        .testimonial-card {
+            transition: all 0.3s ease;
+        }
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+        }
+        .scroll-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 99;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+        .scroll-top.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        #servicios ul li span {
+            color: #e2e8f0; /* gray-200 */
+        }
+        .gold-text {
+            background: linear-gradient(135deg, #eee027 0%, #d4c41f 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .hero-pattern {
+            background-color: #000;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23eee027' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+        .feature-icon {
+            background: linear-gradient(135deg, #eee027 0%, #d4c41f 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <!-- Header/Navigation -->
+    <header class="fixed w-full bg-black shadow-2xl z-50 border-b border-gold border-opacity-20">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <img src="logo.png" alt="PH ASESORÍA CONTABLE-FISCAL" class="h-20 w-auto filter brightness-110 drop-shadow-lg">
+                </div>
+                
+                <nav class="hidden md:flex space-x-12">
+                    <a href="#inicio" class="nav-link text-white hover:text-gold font-bold text-lg tracking-widest transition duration-300 uppercase">INICIO</a>
+                    <a href="#servicios" class="nav-link text-white hover:text-gold font-bold text-lg tracking-widest transition duration-300 uppercase">SERVICIOS</a>
+                    <a href="#cotizacion" class="nav-link text-white hover:text-gold font-bold text-lg tracking-widest transition duration-300 uppercase">COTIZACIÓN</a>
+                    <a href="#nosotros" class="nav-link text-white hover:text-gold font-bold text-lg tracking-widest transition duration-300 uppercase">NOSOTROS</a>
+                    <a href="#contacto" class="nav-link text-white hover:text-gold font-bold text-lg tracking-widest transition duration-300 uppercase">CONTACTO</a>
+                </nav>
+                
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-white hover:text-gold focus:outline-none p-2">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="md:hidden hidden pt-6 pb-4 border-t border-gold border-opacity-30">
+                <a href="#inicio" class="block py-3 text-white hover:text-gold font-bold tracking-wide uppercase">INICIO</a>
+                <a href="#servicios" class="block py-3 text-white hover:text-gold font-bold tracking-wide uppercase">SERVICIOS</a>
+                <a href="#cotizacion" class="block py-3 text-white hover:text-gold font-bold tracking-wide uppercase">COTIZACIÓN</a>
+                <a href="#nosotros" class="block py-3 text-white hover:text-gold font-bold tracking-wide uppercase">NOSOTROS</a>
+                <a href="#contacto" class="block py-3 text-white hover:text-gold font-bold tracking-wide uppercase">CONTACTO</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero-pattern pt-32 pb-24 md:pt-48 md:pb-40">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-12 md:mb-0">
+                    <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold playfair leading-tight mb-8 text-white drop-shadow-2xl">
+                        <span class="text-gold tracking-wider">PH ASESORÍA</span><br>
+                        <span class="text-gold tracking-wider">CONTABLE-FISCAL</span>
+                    </h1>
+                    <p class="text-xl text-gray-200 mb-10 max-w-lg leading-relaxed font-light">
+                        Excelencia en servicios fiscales para empresarios que valoran la <span class="text-gold font-semibold">precisión</span> y el <span class="text-gold font-semibold">prestigio profesional</span>. Optimizamos tu gestión financiera con distinción.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-6">
+                        <a href="#contacto" class="inline-block gold-gradient text-black px-10 py-4 rounded-lg hover:shadow-2xl transition duration-500 font-bold text-lg tracking-wide uppercase transform hover:scale-105 text-center">
+                            CONSULTA GRATUITA
+                        </a>
+                        <a href="#servicios" class="inline-block border-2 border-gold text-gold px-10 py-4 rounded-lg hover:bg-gold hover:text-black transition duration-500 font-bold text-lg tracking-wide uppercase transform hover:scale-105 text-center">
+                            VER SERVICIOS
+                        </a>
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <div class="relative">
+                        <svg class="w-full h-auto" viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="50" y="50" width="500" height="300" rx="10" fill="#111111" />
+                            <rect x="80" y="80" width="440" height="240" rx="5" fill="#222222" />
+                            <path d="M120 120 L480 120 L480 320 L120 320 Z" fill="#333333" />
+                            
+                            <!-- Financial chart -->
+                            <path d="M150 280 L450 280" stroke="#444444" stroke-width="2" />
+                            <path d="M150 240 L450 240" stroke="#444444" stroke-width="1" />
+                            <path d="M150 200 L450 200" stroke="#444444" stroke-width="1" />
+                            <path d="M150 160 L450 160" stroke="#444444" stroke-width="1" />
+                            
+                            <!-- Gold bars -->
+                            <rect x="170" y="240" width="30" height="40" fill="#eee027" />
+                            <rect x="210" y="220" width="30" height="60" fill="#eee027" />
+                            <rect x="250" y="200" width="30" height="80" fill="#eee027" />
+                            <rect x="290" y="180" width="30" height="100" fill="#eee027" />
+                            <rect x="330" y="160" width="30" height="120" fill="#eee027" />
+                            <rect x="370" y="190" width="30" height="90" fill="#eee027" />
+                            <rect x="410" y="210" width="30" height="70" fill="#eee027" />
+                            
+                            <!-- Calculator icon -->
+                            <rect x="380" y="100" width="80" height="100" rx="5" fill="#111111" stroke="#eee027" stroke-width="2" />
+                            <rect x="390" y="110" width="60" height="20" rx="2" fill="#222222" />
+                            <circle cx="400" cy="145" r="8" fill="#eee027" />
+                            <circle cx="400" cy="175" r="8" fill="#eee027" />
+                            <circle cx="420" cy="145" r="8" fill="#eee027" />
+                            <circle cx="420" cy="175" r="8" fill="#eee027" />
+                            <circle cx="440" cy="145" r="8" fill="#eee027" />
+                            <circle cx="440" cy="175" r="8" fill="#eee027" />
+                        </svg>
+                        <div class="absolute -bottom-6 -right-6 bg-gold text-black p-4 rounded-lg shadow-lg">
+                            <p class="font-semibold">Optimiza tu fiscalidad</p>
+                            <p class="text-sm">Ahorra hasta un 30%</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold playfair mb-4">¿Por qué elegirnos?</h2>
+                <div class="section-divider"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto">Combinamos experiencia, tecnología y atención personalizada para ofrecer soluciones contables y fiscales de excelencia.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="service-card bg-white rounded-lg p-8 shadow-lg">
+                    <div class="bg-gray-800 rounded-full w-16 h-16 flex items-center justify-center mb-6">
+                        <i class="fas fa-award text-3xl text-yellow-400"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 playfair">Experiencia Comprobada</h3>
+                    <p class="text-gray-600 mb-4">Más de 15 años de experiencia brindando asesoría contable y fiscal a empresas de todos los tamaños.</p>
+                    <p class="font-medium" style="color: #d4c41f;">Confía en expertos certificados.</p>
+                </div>
+                
+                <!-- Feature 2 -->
+                <div class="service-card bg-white rounded-lg p-8 shadow-lg">
+                    <div class="bg-gray-800 rounded-full w-16 h-16 flex items-center justify-center mb-6">
+                        <i class="fas fa-user-tie text-3xl text-yellow-400"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 playfair">Atención Personalizada</h3>
+                    <p class="text-gray-600 mb-4">Cada cliente recibe un trato único y soluciones adaptadas específicamente a sus necesidades particulares.</p>
+                    <p class="font-medium" style="color: #d4c41f;">Tu negocio es nuestra prioridad.</p>
+                </div>
+                
+                <!-- Feature 3 -->
+                <div class="service-card bg-white rounded-lg p-8 shadow-lg">
+                    <div class="bg-gray-800 rounded-full w-16 h-16 flex items-center justify-center mb-6">
+                        <i class="fas fa-shield-alt text-3xl text-yellow-400"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 playfair">Seguridad y Confidencialidad</h3>
+                    <p class="text-gray-600 mb-4">Garantizamos la protección total de tu información financiera con los más altos estándares de seguridad.</p>
+                    <p class="font-medium" style="color: #d4c41f;">Tu información en las mejores manos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="servicios" class="py-20 bg-black text-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold playfair mb-4 text-white">Nuestros Servicios</h2>
+                <div class="section-divider"></div>
+                <p class="text-gray-300 max-w-2xl mx-auto">Ofrecemos soluciones integrales para todas tus necesidades contables y fiscales.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-gray-900 rounded-lg overflow-hidden shadow-xl transition-transform duration-300 hover:-translate-y-2 border-t-4 border-gold">
+                    <div class="p-8">
+                        <div class="flex items-center justify-center w-16 h-16 bg-gold bg-opacity-20 rounded-full mb-6">
+                            <i class="fas fa-calculator text-3xl text-gold"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4 playfair text-white">Contabilidad Administrativa</h3>
+                        <ul class="space-y-3 mb-6">
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-gold mt-0.5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span>Clasificación y captura de facturación</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-gold mt-0.5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span>Clasificación de activos tangibles e intangibles</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-gold mt-0.5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span>Conciliación bancaria mensual</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-gold mt-0.5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span>Cierre contable y depuración de cuentas</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-gold mt-0.5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span>Estados financieros completos</span>
+                            </li>
+                        </ul>
+                        <div class="bg-black p-4 rounded-lg border border-gold border-opacity-30">
+                            <p class="font-semibold text-gold">Beneficio:</p>
+                            <p class="text-gray-300">Visión clara de tu salud financiera</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="bg-gray-900 rounded-lg overflow-hidden shadow-xl transition-transform duration-300 hover:-translate-y-2 border-t-4 border-gold">
+                    <div class="p-8">
+                        <div class="flex items-center justify-center w-16 h-16 bg-gold bg-opacity-20 rounded-full mb-6">
+                            <i class="fas fa-file-invoice-dollar text-3xl text-gold"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4 playfair text-white">Consultoría Fiscal</h3>
+                        <ul class="space-y-3 mb-6">
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-gold mt-0.5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span>Declaraciones provisionales y anuales</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-gold mt-0.5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span>Planeación fiscal personalizada</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-gold mt-0.5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span>Asesoría en facturación electrónica</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-gold mt-0.5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span>Atención de revisiones SAT</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-gold mt-0.5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span>Estrategias de optimización fiscal</span>
+                            </li>
+                        </ul>
+                        <div class="bg-black p-4 rounded-lg border border-gold border-opacity-30">
+                            <p class="font-semibold text-gold">Beneficio:</p>
+                            <p class="text-gray-300">Optimiza tu carga fiscal y evita sanciones</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="bg-gray-900 rounded-lg overflow-hidden shadow-xl transition-transform duration-300 hover:-translate-y-2 border-t-4 border-gold">
+                    <div class="p-8">
+                        <div class="flex items-center justify-center w-16 h-16 bg-gold bg-opacity-20 rounded-full mb-6">
+                            <i class="fas fa-users text-3xl text-gold"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4 playfair text-white">Nómina y Recursos Humanos</h3>
+                        <ul class="space-y-3 mb-6">
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-gold mt-0.5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span>Cálculo de nómina e IMSS/INFONAVIT</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-gold mt-0.5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span>PTU, reparto de utilidades</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-gold mt-0.5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span>Alta/baja de empleados, finiquitos</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-gold mt-0.5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span>Gestión de prestaciones laborales</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-gold mt-0.5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span>Cumplimiento de obligaciones patronales</span>
+                            </li>
+                        </ul>
+                        <div class="bg-black p-4 rounded-lg border border-gold border-opacity-30">
+                            <p class="font-semibold text-gold">Beneficio:</p>
+                            <p class="text-gray-300">Gestión integral de personal</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cotización Section -->
+    <section id="cotizacion" class="py-32 bg-black">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-20">
+                <h2 class="text-5xl md:text-6xl font-bold playfair mb-6 text-white tracking-wide">SOLICITA TU COTIZACIÓN</h2>
+                <div class="w-32 h-1 bg-gold mx-auto mb-8" style="background-color: #eee027;"></div>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">Servicios personalizados adaptados a tus necesidades específicas. Sin costos fijos, solo pagas por lo que realmente necesitas.</p>
+            </div>
+            
+            <div class="max-w-5xl mx-auto">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                    <!-- Información de servicios -->
+                    <div class="bg-gradient-to-br from-gray-900 to-black rounded-2xl p-10 border-2 border-opacity-30" style="border-color: #eee027;">
+                        <h3 class="text-3xl font-bold mb-8 playfair text-white tracking-wide">NUESTROS SERVICIOS</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="w-8 h-8 rounded-full flex items-center justify-center mr-4 mt-1" style="background-color: #eee027;">
+                                    <i class="fas fa-calculator text-black text-sm"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-bold text-white mb-2">Contabilidad Administrativa</h4>
+                                    <p class="text-gray-300">Clasificación, captura, conciliación bancaria y estados financieros completos</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="w-8 h-8 rounded-full flex items-center justify-center mr-4 mt-1" style="background-color: #eee027;">
+                                    <i class="fas fa-file-invoice-dollar text-black text-sm"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-bold text-white mb-2">Consultoría Fiscal</h4>
+                                    <p class="text-gray-300">Declaraciones, planeación fiscal y atención de revisiones SAT</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="w-8 h-8 rounded-full flex items-center justify-center mr-4 mt-1" style="background-color: #eee027;">
+                                    <i class="fas fa-users text-black text-sm"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-bold text-white mb-2">Nómina y Recursos Humanos</h4>
+                                    <p class="text-gray-300">Cálculo de nómina, IMSS/INFONAVIT, PTU y gestión integral</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="w-8 h-8 rounded-full flex items-center justify-center mr-4 mt-1" style="background-color: #eee027;">
+                                    <i class="fas fa-chart-line text-black text-sm"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-bold text-white mb-2">Consultoría Estratégica</h4>
+                                    <p class="text-gray-300">Reportes ejecutivos, análisis financiero y planeación avanzada</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-10 p-6 bg-black rounded-lg border border-opacity-30" style="border-color: #eee027;">
+                            <div class="flex items-center mb-4">
+                                <i class="fas fa-star text-2xl mr-3" style="color: #eee027;"></i>
+                                <h4 class="text-xl font-bold text-white playfair">VENTAJA EXCLUSIVA</h4>
+                            </div>
+                            <p class="text-gray-300 text-lg leading-relaxed">
+                                <span style="color: #eee027;" class="font-semibold">SIN COSTOS FIJOS.</span> Pagas únicamente por los servicios que utilizas, con la flexibilidad de ajustar según las necesidades de tu negocio.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Formulario de cotización -->
+                    <div class="bg-white rounded-2xl p-10 shadow-2xl">
+                        <h3 class="text-3xl font-bold mb-8 playfair text-black tracking-wide">SOLICITA TU COTIZACIÓN</h3>
+                        
+                        <form id="cotizacion-form" class="space-y-6">
+                            <div>
+                                <label class="block text-gray-700 font-semibold mb-3">Nombre de la empresa o persona física</label>
+                                <input type="text" required class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-yellow-400" placeholder="Nombre completo">
+                            </div>
+                            
+                            <div>
+                                <label class="block text-gray-700 font-semibold mb-3">Tipo de persona</label>
+                                <select required class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none">
+                                    <option value="">Selecciona una opción</option>
+                                    <option value="fisica">Persona Física</option>
+                                    <option value="moral">Persona Moral</option>
+                                    <option value="freelancer">Freelancer</option>
+                                </select>
+                            </div>
+                            
+                            <div>
+                                <label class="block text-gray-700 font-semibold mb-3">Servicios de interés (selecciona todos los que apliquen)</label>
+                                <div class="space-y-3">
+                                    <label class="flex items-center">
+                                        <input type="checkbox" class="mr-3 w-5 h-5" style="accent-color: #eee027;">
+                                        <span>Contabilidad Administrativa</span>
+                                    </label>
+                                    <label class="flex items-center">
+                                        <input type="checkbox" class="mr-3 w-5 h-5" style="accent-color: #eee027;">
+                                        <span>Consultoría Fiscal</span>
+                                    </label>
+                                    <label class="flex items-center">
+                                        <input type="checkbox" class="mr-3 w-5 h-5" style="accent-color: #eee027;">
+                                        <span>Nómina y Recursos Humanos</span>
+                                    </label>
+                                    <label class="flex items-center">
+                                        <input type="checkbox" class="mr-3 w-5 h-5" style="accent-color: #eee027;">
+                                        <span>Consultoría Estratégica</span>
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <label class="block text-gray-700 font-semibold mb-3">Número aproximado de empleados</label>
+                                <select class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none">
+                                    <option value="">Selecciona</option>
+                                    <option value="0">Solo yo</option>
+                                    <option value="1-5">1-5 empleados</option>
+                                    <option value="6-10">6-10 empleados</option>
+                                    <option value="11-25">11-25 empleados</option>
+                                    <option value="26+">Más de 25 empleados</option>
+                                </select>
+                            </div>
+                            
+                            <div>
+                                <label class="block text-gray-700 font-semibold mb-3">Detalles adicionales</label>
+                                <textarea rows="4" class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none" placeholder="Cuéntanos más sobre tus necesidades específicas..."></textarea>
+                            </div>
+                            
+                            <div>
+                                <label class="block text-gray-700 font-semibold mb-3">Información de contacto</label>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    <input type="email" required class="px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none" placeholder="Email">
+                                    <input type="tel" required class="px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none" placeholder="Teléfono">
+                                </div>
+                            </div>
+                            
+                            <button type="submit" class="w-full text-black px-8 py-4 rounded-lg hover:shadow-2xl transition duration-500 font-bold text-lg tracking-wide uppercase transform hover:scale-105" style="background: linear-gradient(135deg, #eee027 0%, #f9f785 100%);">
+                                SOLICITAR COTIZACIÓN GRATUITA
+                            </button>
+                            
+                            <p class="text-center text-sm text-gray-500 mt-4">
+                                Responderemos en menos de 24 horas
+                            </p>
+                        </form>
+                    </div>
+                </div>
+                
+                <!-- Call to action adicional -->
+                <div class="mt-20 text-center">
+                    <div class="bg-gradient-to-br from-gray-900 to-black rounded-2xl p-12 border-2 border-opacity-30" style="border-color: #eee027;">
+                        <h3 class="text-3xl font-bold mb-6 text-white playfair">¿NECESITAS ASESORÍA INMEDIATA?</h3>
+                        <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">Agenda una consulta telefónica gratuita de 30 minutos con nuestros expertos</p>
+                        <div class="flex flex-col md:flex-row gap-6 justify-center">
+                            <a href="tel:+525565553291" class="inline-flex items-center justify-center text-black px-8 py-4 rounded-lg hover:shadow-2xl transition duration-500 font-bold text-lg tracking-wide uppercase transform hover:scale-105" style="background: linear-gradient(135deg, #eee027 0%, #f9f785 100%);">
+                                <i class="fas fa-phone mr-3"></i>
+                                LLAMAR AHORA
+                            </a>
+                            <a href="#contacto" class="inline-flex items-center justify-center border-2 px-8 py-4 rounded-lg hover:text-black transition duration-500 font-bold text-lg tracking-wide uppercase transform hover:scale-105" style="border-color: #eee027; color: #eee027; background: transparent;">
+                                <i class="fas fa-calendar-alt mr-3"></i>
+                                AGENDAR CITA
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Value Added Section -->
+    <section class="py-32 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-20">
+                <h2 class="text-5xl md:text-6xl font-bold playfair mb-6 text-black tracking-wide">VALOR AGREGADO EXCLUSIVO</h2>
+                <div class="w-32 h-1 bg-gold mx-auto mb-8"></div>
+                <p class="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">Beneficios premium que distinguen nuestros servicios de asesoría fiscal de alta gama.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 max-w-6xl mx-auto">
+                <!-- Value 1 -->
+                <div class="bg-gradient-to-br from-black to-gray-900 rounded-2xl p-10 shadow-2xl transition-all duration-500 hover:transform hover:scale-105 border border-gold border-opacity-30">
+                    <div class="flex items-center justify-center w-20 h-20 bg-gold bg-opacity-20 rounded-full mb-8 mx-auto">
+                        <i class="fas fa-chart-line text-4xl text-gold"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-6 text-center playfair text-white tracking-wide">REPORTES EJECUTIVOS</h3>
+                    <p class="text-gray-300 text-center text-lg leading-relaxed">Análisis financiero profesional cada trimestre con insights estratégicos y recomendaciones personalizadas para optimizar su rentabilidad.</p>
+                </div>
+                
+                <!-- Value 2 -->
+                <div class="bg-gradient-to-br from-black to-gray-900 rounded-2xl p-10 shadow-2xl transition-all duration-500 hover:transform hover:scale-105 border border-gold border-opacity-30">
+                    <div class="flex items-center justify-center w-20 h-20 bg-gold bg-opacity-20 rounded-full mb-8 mx-auto">
+                        <i class="fas fa-phone-alt text-4xl text-gold"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-6 text-center playfair text-white tracking-wide">CONSULTORÍA VIP</h3>
+                    <p class="text-gray-300 text-center text-lg leading-relaxed">Acceso ilimitado a nuestros expertos fiscales certificados. Consultas telefónicas prioritarias para resolver dudas complejas de manera inmediata.</p>
+                </div>
+                
+                <!-- Value 3 -->
+                <div class="bg-gradient-to-br from-black to-gray-900 rounded-2xl p-10 shadow-2xl transition-all duration-500 hover:transform hover:scale-105 border border-gold border-opacity-30">
+                    <div class="flex items-center justify-center w-20 h-20 bg-gold bg-opacity-20 rounded-full mb-8 mx-auto">
+                        <i class="fas fa-bell text-4xl text-gold"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-6 text-center playfair text-white tracking-wide">ALERTAS INTELIGENTES</h3>
+                    <p class="text-gray-300 text-center text-lg leading-relaxed">Sistema premium de notificaciones sobre vencimientos SAT, cambios fiscales y oportunidades de optimización fiscal personalizadas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-32 bg-black">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-20">
+                <h2 class="text-5xl md:text-6xl font-bold playfair mb-6 text-white tracking-wide">TESTIMONIOS DISTINGUIDOS</h2>
+                <div class="w-32 h-1 bg-gold mx-auto mb-8"></div>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">La satisfacción de nuestros clientes executive es nuestro mejor aval profesional.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card bg-gray-50 rounded-lg p-8 shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="text-gold">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic mb-6">"PH Asesoría transformó completamente la gestión fiscal de mi empresa. Gracias a su planeación fiscal, logramos un ahorro significativo y ahora tengo total tranquilidad en temas contables."</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-black rounded-full flex items-center justify-center text-gold font-bold text-xl">
+                            JR
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="font-bold">Juan Rodríguez</h4>
+                            <p class="text-gray-500 text-sm">Director General, Innovatech</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card bg-gray-50 rounded-lg p-8 shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="text-gold">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic mb-6">"Como freelancer, siempre me preocupaba la parte fiscal. Desde que trabajo con PH Asesoría, puedo concentrarme en mi negocio mientras ellos se encargan de mantener todo en orden con el SAT."</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-black rounded-full flex items-center justify-center text-gold font-bold text-xl">
+                            LM
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="font-bold">Laura Méndez</h4>
+                            <p class="text-gray-500 text-sm">Diseñadora Independiente</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card bg-gray-50 rounded-lg p-8 shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="text-gold">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic mb-6">"Su servicio de nómina es excepcional. Han simplificado enormemente nuestra gestión de personal y siempre están disponibles para resolver cualquier duda. Altamente recomendables."</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-black rounded-full flex items-center justify-center text-gold font-bold text-xl">
+                            CG
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="font-bold">Carlos Gutiérrez</h4>
+                            <p class="text-gray-500 text-sm">Gerente de RH, Grupo Empresarial</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="nosotros" class="py-20 bg-black text-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <div class="relative">
+                        <svg class="w-full h-auto" viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="50" y="50" width="400" height="300" rx="10" fill="#222222" />
+                            <rect x="80" y="80" width="340" height="240" rx="5" fill="#333333" />
+                            
+                            <!-- Office elements -->
+                            <rect x="120" y="120" width="120" height="160" rx="5" fill="#444444" />
+                            <rect x="130" y="130" width="100" height="60" rx="2" fill="#eee027" opacity="0.3" />
+                            <rect x="130" y="200" width="100" height="70" rx="2" fill="#eee027" opacity="0.3" />
+                            
+                            <rect x="260" y="120" width="120" height="160" rx="5" fill="#444444" />
+                            <rect x="270" y="130" width="100" height="140" rx="2" fill="#eee027" opacity="0.2" />
+                            
+                            <!-- People silhouettes -->
+                            <circle cx="180" cy="170" r="15" fill="#eee027" />
+                            <rect x="165" y="185" width="30" height="40" rx="5" fill="#eee027" />
+                            
+                            <circle cx="320" cy="170" r="15" fill="#eee027" />
+                            <rect x="305" y="185" width="30" height="40" rx="5" fill="#eee027" />
+                        </svg>
+                        <div class="absolute -bottom-6 -left-6 bg-gold text-black p-4 rounded-lg shadow-lg">
+                            <p class="font-semibold">+15 años</p>
+                            <p class="text-sm">de experiencia</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2 md:pl-12">
+                    <h2 class="text-3xl md:text-4xl font-bold playfair mb-6">Sobre Nosotros</h2>
+                    <div class="h-1 w-20 bg-gold mb-6"></div>
+                    <p class="text-gray-300 mb-6">
+                        En PH Asesoría Contable-Fiscal, nos dedicamos a proporcionar servicios contables y fiscales de la más alta calidad, ayudando a nuestros clientes a optimizar su gestión financiera y cumplir con todas sus obligaciones fiscales.
+                    </p>
+                    <p class="text-gray-300 mb-8">
+                        Nuestro equipo está formado por profesionales certificados con amplia experiencia en el sector, comprometidos con la excelencia y la atención personalizada. Entendemos que cada cliente es único, por lo que desarrollamos estrategias a medida que se adaptan a sus necesidades específicas.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-gray-900 p-4 rounded-lg">
+                            <div class="text-3xl font-bold text-gold mb-2">500+</div>
+                            <p class="text-gray-300">Clientes satisfechos</p>
+                        </div>
+                        <div class="bg-gray-900 p-4 rounded-lg">
+                            <div class="text-3xl font-bold text-gold mb-2">20+</div>
+                            <p class="text-gray-300">Profesionales certificados</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 gold-gradient">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center justify-between">
+                <div class="md:w-2/3 mb-8 md:mb-0">
+                    <h2 class="text-3xl md:text-4xl font-bold playfair mb-4 text-black">¿Listo para optimizar tu gestión fiscal?</h2>
+                    <p class="text-lg text-gray-800">Contáctanos hoy mismo y descubre cómo podemos ayudarte a maximizar tus beneficios y minimizar tus preocupaciones fiscales.</p>
+                </div>
+                <div>
+                    <a href="#contacto" class="inline-block bg-black text-gold px-8 py-4 rounded-md hover:bg-gray-900 transition duration-300 font-bold">
+                        Solicitar Asesoría
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacto" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold playfair mb-4">Contáctanos</h2>
+                <div class="section-divider"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto">Estamos listos para ayudarte con todas tus necesidades contables y fiscales. Completa el formulario y nos pondremos en contacto contigo a la brevedad.</p>
+            </div>
+            
+            <div class="flex flex-col md:flex-row">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-8">
+                    <form class="bg-gray-50 p-8 rounded-lg shadow-md">
+                        <div class="mb-6">
+                            <label for="name" class="block text-gray-700 font-medium mb-2">Nombre completo</label>
+                            <input type="text" id="name" class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gold" placeholder="Tu nombre">
+                        </div>
+                        <div class="mb-6">
+                            <label for="email" class="block text-gray-700 font-medium mb-2">Correo electrónico</label>
+                            <input type="email" id="email" class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gold" placeholder="tu@email.com">
+                        </div>
+                        <div class="mb-6">
+                            <label for="phone" class="block text-gray-700 font-medium mb-2">Teléfono</label>
+                            <input type="tel" id="phone" class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gold" placeholder="Tu número telefónico">
+                        </div>
+                        <div class="mb-6">
+                            <label for="service" class="block text-gray-700 font-medium mb-2">Servicio de interés</label>
+                            <select id="service" class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gold">
+                                <option value="">Selecciona un servicio</option>
+                                <option value="contabilidad">Contabilidad Administrativa</option>
+                                <option value="fiscal">Consultoría Fiscal</option>
+                                <option value="nomina">Nómina y Recursos Humanos</option>
+                                <option value="otro">Otro</option>
+                            </select>
+                        </div>
+                        <div class="mb-6">
+                            <label for="message" class="block text-gray-700 font-medium mb-2">Mensaje</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gold" placeholder="¿En qué podemos ayudarte?"></textarea>
+                        </div>
+                        <div>
+                            <button type="submit" class="w-full gold-gradient text-black px-6 py-3 rounded-md hover:bg-gold-dark transition duration-300 font-medium">
+                                Enviar Mensaje
+                            </button>
+                        </div>
+                        <div class="mt-4 text-center text-sm text-gray-500">
+                            <p>Al enviar se abrirá tu cliente de email</p>
+                        </div>
+                    </form>
+                </div>
+                
+                <div class="md:w-1/2 md:pl-8">
+                    <div class="bg-gray-50 p-8 rounded-lg shadow-md h-full">
+                        <h3 class="text-xl font-bold mb-6 playfair">Información de Contacto</h3>
+                        
+                        <div class="mb-6 flex">
+                            <div class="mr-4 text-gold">
+                                <i class="fas fa-map-marker-alt text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">Dirección</h4>
+                                <p class="text-gray-600">Av. Reforma 1234, Piso 15</p>
+                                <p class="text-gray-600">Col. Juárez, Ciudad de México</p>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-6 flex">
+                            <div class="mr-4" style="color: #d4c41f;">
+                                <i class="fas fa-phone-alt text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">Teléfono</h4>
+                                <p class="text-gray-600">55 6555 3291</p>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-8 flex">
+                            <div class="mr-4" style="color: #d4c41f;">
+                                <i class="fas fa-envelope text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">Correo Electrónico</h4>
+                                <p class="text-gray-600">lic.pam.hdz@gmail.com</p>
+                            </div>
+                        </div>
+                        
+                        <h3 class="text-xl font-bold mb-4 playfair">Horario de Atención</h3>
+                        <div class="mb-8">
+                            <p class="text-gray-600 mb-2"><span class="font-semibold">Lunes a Viernes:</span> 9:00 AM - 6:00 PM</p>
+                            <p class="text-gray-600"><span class="font-semibold">Sábados:</span> 9:00 AM - 1:00 PM</p>
+                        </div>
+                        
+                        <h3 class="text-xl font-bold mb-4 playfair">Síguenos</h3>
+                        <div class="flex space-x-4">
+                            <a href="https://www.facebook.com/contapamelahdz" target="_blank" rel="noopener" title="Facebook - PH Asesoría" class="bg-gray-800 text-yellow-400 w-10 h-10 rounded-full flex items-center justify-center hover:bg-yellow-400 hover:text-black transition duration-300">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://www.instagram.com/lic_pamhdz" target="_blank" rel="noopener" title="Instagram - PH Asesoría" class="bg-gray-800 text-yellow-400 w-10 h-10 rounded-full flex items-center justify-center hover:bg-yellow-400 hover:text-black transition duration-300">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-2xl font-bold mb-4 playfair">
+                        <span class="text-gold">PH</span> Asesoría
+                    </h3>
+                    <p class="text-gray-400 mb-6">
+                        Excelencia en servicios contables y fiscales para empresas y profesionales independientes.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="https://www.facebook.com/contapamelahdz" target="_blank" rel="noopener" title="Facebook" class="text-gray-400 hover:text-yellow-400 transition duration-300">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.instagram.com/lic_pamhdz" target="_blank" rel="noopener" title="Instagram" class="text-gray-400 hover:text-yellow-400 transition duration-300">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Enlaces Rápidos</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#inicio" class="text-gray-400 hover:text-gold transition duration-300">Inicio</a></li>
+                        <li><a href="#servicios" class="text-gray-400 hover:text-gold transition duration-300">Servicios</a></li>
+                        <li><a href="#planes" class="text-gray-400 hover:text-gold transition duration-300">Planes</a></li>
+                        <li><a href="#nosotros" class="text-gray-400 hover:text-gold transition duration-300">Nosotros</a></li>
+                        <li><a href="#contacto" class="text-gray-400 hover:text-gold transition duration-300">Contacto</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Servicios</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-gold transition duration-300">Contabilidad Administrativa</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-gold transition duration-300">Consultoría Fiscal</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-gold transition duration-300">Nómina y Recursos Humanos</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-gold transition duration-300">Planeación Fiscal</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-gold transition duration-300">Auditorías Preventivas</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Contacto</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-gold mt-1 mr-2"></i>
+                            <span class="text-gray-400">Av. Reforma 1234, CDMX</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-phone-alt text-gold mt-1 mr-2"></i>
+                            <span class="text-gray-400">+52 (55) 1234-5678</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-envelope text-gold mt-1 mr-2"></i>
+                            <span class="text-gray-400">contacto@phasesoria.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm mb-4 md:mb-0">
+                    &copy; 2023 PH Asesoría Contable-Fiscal. Todos los derechos reservados.
+                </p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-gold text-sm transition duration-300">Términos y Condiciones</a>
+                    <a href="#" class="text-gray-400 hover:text-gold text-sm transition duration-300">Política de Privacidad</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scroll-top" class="scroll-top gold-gradient text-black w-12 h-12 rounded-full flex items-center justify-center shadow-lg">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Smooth Scrolling for Anchor Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+        
+        // Scroll to Top Button
+        const scrollTopButton = document.getElementById('scroll-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                scrollTopButton.classList.add('active');
+            } else {
+                scrollTopButton.classList.remove('active');
+            }
+        });
+        
+        scrollTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Form Submission Functions
+        function sendEmail(subject, body) {
+            const email = 'lic.pam.hdz@gmail.com';
+            const mailtoUrl = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+            window.location.href = mailtoUrl;
+        }
+        
+        // Contact Form Submission
+        const contactForm = document.querySelector('#contacto form');
+        
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            const formData = new FormData(contactForm);
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const service = document.getElementById('service').value;
+            const message = document.getElementById('message').value;
+            
+            const subject = `Nueva consulta de ${name} - PH Asesoría`;
+            const body = `
+Nombre: ${name}
+Email: ${email}
+Teléfono: ${phone}
+Servicio de interés: ${service}
+Mensaje:
+${message}
+
+Enviado desde el sitio web de PH Asesoría Contable-Fiscal
+            `.trim();
+            
+            sendEmail(subject, body);
+        });
+        
+        // Cotización Form Submission
+        const cotizacionForm = document.getElementById('cotizacion-form');
+        
+        if (cotizacionForm) {
+            cotizacionForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                
+                const formData = new FormData(cotizacionForm);
+                const empresa = cotizacionForm.querySelector('input[type="text"]').value;
+                const tipoPersona = cotizacionForm.querySelector('select').value;
+                const email = cotizacionForm.querySelector('input[type="email"]').value;
+                const telefono = cotizacionForm.querySelector('input[type="tel"]').value;
+                const detalles = cotizacionForm.querySelector('textarea').value;
+                const empleados = cotizacionForm.querySelectorAll('select')[1].value;
+                
+                // Obtener servicios seleccionados
+                const servicios = [];
+                cotizacionForm.querySelectorAll('input[type="checkbox"]:checked').forEach(checkbox => {
+                    servicios.push(checkbox.nextElementSibling.textContent);
+                });
+                
+                const subject = `Solicitud de Cotización - ${empresa} - PH Asesoría`;
+                const body = `
+SOLICITUD DE COTIZACIÓN
+
+Empresa/Persona: ${empresa}
+Tipo de persona: ${tipoPersona}
+Email: ${email}
+Teléfono: ${telefono}
+Número de empleados: ${empleados}
+
+Servicios de interés:
+${servicios.map(s => `• ${s}`).join('\n')}
+
+Detalles adicionales:
+${detalles}
+
+Enviado desde el formulario de cotización de PH Asesoría Contable-Fiscal
+                `.trim();
+                
+                sendEmail(subject, body);
+                alert('¡Gracias por solicitar tu cotización! Se abrirá tu cliente de email para enviar la solicitud a Pamela.');
+            });
+        }
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'962d5d9574c6f09d',t:'MTc1MzEyODg3Ni4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
