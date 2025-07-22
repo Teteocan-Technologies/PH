@@ -486,190 +486,87 @@
                     
                     <!-- Formulario de cotización -->
                     <div class="bg-white rounded-2xl p-10 shadow-2xl">
-                        <h3 class="text-3xl font-bold mb-8 playfair text-black tracking-wide">SOLICITA TU COTIZACIÓN PERSONALIZADA</h3>
+                        <h3 class="text-3xl font-bold mb-8 playfair text-black tracking-wide">SOLICITA TU COTIZACIÓN</h3>
                         
-                        <form id="quote-form" class="space-y-8">
-                            <!-- Información Personal -->
-                            <div class="bg-gray-50 p-6 rounded-lg border-l-4" style="border-left-color: #eee027;">
-                                <h4 class="text-xl font-bold text-gray-800 mb-4 flex items-center">
-                                    <i class="fas fa-user mr-2" style="color: #eee027;"></i>
-                                    Información de Contacto
-                                </h4>
-                                <div class="grid md:grid-cols-2 gap-4">
-                                    <div>
-                                        <label class="block text-gray-700 font-semibold mb-2">Nombre completo *</label>
-                                        <input type="text" name="nombre" required class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-yellow-400 transition duration-300" placeholder="Tu nombre completo">
-                                    </div>
-                                    <div>
-                                        <label class="block text-gray-700 font-semibold mb-2">Teléfono *</label>
-                                        <input type="tel" name="telefono" required class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-yellow-400 transition duration-300" placeholder="(55) 1234-5678">
-                                    </div>
-                                    <div class="md:col-span-2">
-                                        <label class="block text-gray-700 font-semibold mb-2">Email *</label>
-                                        <input type="email" name="email" required class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-yellow-400 transition duration-300" placeholder="tu@empresa.com">
-                                    </div>
+                        <form id="quote-form" class="space-y-6">
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-gray-700 font-semibold mb-2">Nombre completo *</label>
+                                    <input type="text" name="nombre" required class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-yellow-400 transition duration-300" placeholder="Tu nombre completo">
+                                </div>
+                                <div>
+                                    <label class="block text-gray-700 font-semibold mb-2">Empresa</label>
+                                    <input type="text" name="empresa" class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-yellow-400 transition duration-300" placeholder="Nombre de tu empresa">
+                                </div>
+                            </div>
+                            
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-gray-700 font-semibold mb-2">Email *</label>
+                                    <input type="email" name="email" required class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-yellow-400 transition duration-300" placeholder="tu@email.com">
+                                </div>
+                                <div>
+                                    <label class="block text-gray-700 font-semibold mb-2">Teléfono *</label>
+                                    <input type="tel" name="telefono" required class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-yellow-400 transition duration-300" placeholder="(55) 1234-5678">
                                 </div>
                             </div>
 
-                            <!-- Información de la Empresa -->
-                            <div class="bg-gray-50 p-6 rounded-lg border-l-4" style="border-left-color: #eee027;">
-                                <h4 class="text-xl font-bold text-gray-800 mb-4 flex items-center">
-                                    <i class="fas fa-building mr-2" style="color: #eee027;"></i>
-                                    Información de tu Empresa
-                                </h4>
-                                <div class="grid md:grid-cols-2 gap-4">
-                                    <div>
-                                        <label class="block text-gray-700 font-semibold mb-2">Nombre de la empresa *</label>
-                                        <input type="text" name="empresa" required class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-yellow-400 transition duration-300" placeholder="Nombre de tu empresa">
-                                    </div>
-                                    <div>
-                                        <label class="block text-gray-700 font-semibold mb-2">Tipo de persona *</label>
-                                        <select name="tipo_persona" required class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-yellow-400 transition duration-300" title="Seleccionar tipo de persona">
-                                            <option value="">Selecciona...</option>
-                                            <option value="Persona Física">Persona Física</option>
-                                            <option value="Persona Moral">Persona Moral</option>
-                                        </select>
-                                    </div>
-                                    <div>
-                                        <label class="block text-gray-700 font-semibold mb-2">Número de empleados</label>
-                                        <select name="empleados" class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-yellow-400 transition duration-300" title="Seleccionar número de empleados">
-                                            <option value="">No aplica / Solo yo</option>
-                                            <option value="1-5 empleados">1-5 empleados</option>
-                                            <option value="6-15 empleados">6-15 empleados</option>
-                                            <option value="16-50 empleados">16-50 empleados</option>
-                                            <option value="Más de 50 empleados">Más de 50 empleados</option>
-                                        </select>
-                                    </div>
-                                    <div>
-                                        <label class="block text-gray-700 font-semibold mb-2">Actividad principal *</label>
-                                        <input type="text" name="actividad" required class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-yellow-400 transition duration-300" placeholder="¿A qué se dedica tu empresa?">
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Servicios Detallados -->
-                            <div class="bg-gray-50 p-6 rounded-lg border-l-4" style="border-left-color: #eee027;">
-                                <h4 class="text-xl font-bold text-gray-800 mb-4 flex items-center">
-                                    <i class="fas fa-clipboard-check mr-2" style="color: #eee027;"></i>
-                                    Servicios que Necesitas
-                                </h4>
-                                
-                                <!-- Contabilidad Administrativa -->
-                                <div class="mb-6 p-4 bg-white rounded-lg border border-gray-200">
-                                    <div class="flex items-center mb-3">
-                                        <input type="checkbox" name="servicios" value="Contabilidad Administrativa" class="mr-3 w-5 h-5" style="accent-color: #eee027;" id="contabilidad">
-                                        <label for="contabilidad" class="text-gray-800 font-bold text-lg">A) Contabilidad Administrativa</label>
-                                    </div>
-                                    <div class="ml-8 text-sm text-gray-600 space-y-1">
-                                        <p>• Clasificación y captura de facturación emitida y recibida</p>
-                                        <p>• Clasificación correcta de activos tangibles e intangibles</p>
-                                        <p>• Conciliación bancaria mensual</p>
-                                        <p>• Cierre contable y depuración de cuentas</p>
-                                        <p>• Estados financieros (balance, resultado, flujo de efectivo)</p>
-                                        <p class="font-semibold" style="color: #eee027;">✓ Beneficio: Visión clara de tu salud financiera</p>
-                                    </div>
-                                </div>
-
-                                <!-- Consultoría Fiscal -->
-                                <div class="mb-6 p-4 bg-white rounded-lg border border-gray-200">
-                                    <div class="flex items-center mb-3">
-                                        <input type="checkbox" name="servicios" value="Consultoría Fiscal" class="mr-3 w-5 h-5" style="accent-color: #eee027;" id="consultoria">
-                                        <label for="consultoria" class="text-gray-800 font-bold text-lg">B) Consultoría Fiscal</label>
-                                    </div>
-                                    <div class="ml-8 text-sm text-gray-600 space-y-1">
-                                        <p>• Declaraciones provisionales y anuales</p>
-                                        <p>• Planeación fiscal personalizada</p>
-                                        <p>• Asesoría en facturación electrónica</p>
-                                        <p>• Atención de revisiones SAT</p>
-                                        <p class="font-semibold" style="color: #eee027;">✓ Beneficio: Optimiza tu carga fiscal y evita sanciones</p>
-                                    </div>
-                                </div>
-
-                                <!-- Nómina y RRHH -->
-                                <div class="mb-6 p-4 bg-white rounded-lg border border-gray-200">
-                                    <div class="flex items-center mb-3">
-                                        <input type="checkbox" name="servicios" value="Nómina y Recursos Humanos" class="mr-3 w-5 h-5" style="accent-color: #eee027;" id="nomina">
-                                        <label for="nomina" class="text-gray-800 font-bold text-lg">C) Nómina y Recursos Humanos</label>
-                                    </div>
-                                    <div class="ml-8 text-sm text-gray-600 space-y-1">
-                                        <p>• Cálculo de nómina e IMSS/INFONAVIT</p>
-                                        <p>• PTU, reparto de utilidades</p>
-                                        <p>• Alta/baja de empleados, finiquitos</p>
-                                        <p class="font-semibold" style="color: #eee027;">✓ Beneficio: Gestión integral de personal</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Planes Mensuales -->
-                            <div class="bg-gradient-to-r from-yellow-50 to-yellow-100 p-6 rounded-lg border-2" style="border-color: #eee027;">
-                                <h4 class="text-xl font-bold text-gray-800 mb-4 flex items-center">
-                                    <i class="fas fa-crown mr-2" style="color: #eee027;"></i>
-                                    Planes Mensuales Disponibles
-                                </h4>
-                                <div class="space-y-4">
-                                    <div class="flex items-start p-3 bg-white rounded-lg border border-gray-200">
-                                        <input type="radio" name="plan" value="Plan Básico" class="mr-3 w-5 h-5 mt-1" style="accent-color: #eee027;" id="basico">
-                                        <div class="flex-1">
-                                            <label for="basico" class="text-gray-800 font-bold block">Plan Básico</label>
-                                            <p class="text-gray-600 text-sm">Ideal para: Freelancers/Personas físicas</p>
-                                            <p class="text-gray-600 text-sm font-medium">Incluye: Contabilidad + declaración</p>
-                                        </div>
-                                    </div>
-                                    <div class="flex items-start p-3 bg-white rounded-lg border border-gray-200">
-                                        <input type="radio" name="plan" value="Plan PyME" class="mr-3 w-5 h-5 mt-1" style="accent-color: #eee027;" id="pyme">
-                                        <div class="flex-1">
-                                            <label for="pyme" class="text-gray-800 font-bold block">Plan PyME</label>
-                                            <p class="text-gray-600 text-sm">Ideal para: Empresas medianas</p>
-                                            <p class="text-gray-600 text-sm font-medium">Incluye: Todo lo anterior + nómina + asesoría fiscal</p>
-                                        </div>
-                                    </div>
-                                    <div class="flex items-start p-3 bg-white rounded-lg border border-gray-200">
-                                        <input type="radio" name="plan" value="Plan Premium" class="mr-3 w-5 h-5 mt-1" style="accent-color: #eee027;" id="premium">
-                                        <div class="flex-1">
-                                            <label for="premium" class="text-gray-800 font-bold block">Plan Premium</label>
-                                            <p class="text-gray-600 text-sm">Ideal para: Empresas más complejas</p>
-                                            <p class="text-gray-600 text-sm font-medium">Incluye: Paquete PyME + consultoría estratégica mensual</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Valor Agregado -->
-                            <div class="bg-gradient-to-r from-yellow-500 to-yellow-400 p-6 rounded-lg text-black">
-                                <h4 class="text-xl font-bold mb-4 flex items-center">
-                                    <i class="fas fa-gift mr-2"></i>
-                                    Valor Agregado GRATIS en Todos los Planes
-                                </h4>
-                                <div class="grid md:grid-cols-3 gap-4 text-sm">
-                                    <div class="flex items-center">
-                                        <i class="fas fa-chart-bar mr-2"></i>
-                                        <span>Reportes trimestrales de desempeño</span>
-                                    </div>
-                                    <div class="flex items-center">
-                                        <i class="fas fa-phone mr-2"></i>
-                                        <span>Asesorías telefónicas ilimitadas</span>
-                                    </div>
-                                    <div class="flex items-center">
-                                        <i class="fas fa-bell mr-2"></i>
-                                        <span>Alertas de fechas SAT vía WhatsApp/email</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Comentarios Adicionales -->
                             <div>
-                                <label class="block text-gray-700 font-semibold mb-2">Comentarios adicionales o dudas específicas</label>
-                                <textarea name="detalles" rows="4" class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-yellow-400 transition duration-300" placeholder="Cuéntanos más sobre tus necesidades específicas o cualquier duda que tengas..."></textarea>
+                                <label class="block text-gray-700 font-semibold mb-2">Tipo de persona *</label>
+                                <select name="tipo_persona" required class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-yellow-400 transition duration-300" title="Seleccionar tipo de persona">
+                                    <option value="">Selecciona...</option>
+                                    <option value="Persona Física">Persona Física</option>
+                                    <option value="Persona Moral">Persona Moral</option>
+                                </select>
+                            </div>
+                            
+                            <div>
+                                <label class="block text-gray-700 font-semibold mb-2">Servicios de interés</label>
+                                <div class="grid md:grid-cols-2 gap-3">
+                                    <label class="flex items-center">
+                                        <input type="checkbox" name="servicios" value="Contabilidad Administrativa" class="mr-3 w-5 h-5" style="accent-color: #eee027;">
+                                        <span class="text-gray-700">Contabilidad Administrativa</span>
+                                    </label>
+                                    <label class="flex items-center">
+                                        <input type="checkbox" name="servicios" value="Consultoría Fiscal" class="mr-3 w-5 h-5" style="accent-color: #eee027;">
+                                        <span class="text-gray-700">Consultoría Fiscal</span>
+                                    </label>
+                                    <label class="flex items-center">
+                                        <input type="checkbox" name="servicios" value="Nómina y Recursos Humanos" class="mr-3 w-5 h-5" style="accent-color: #eee027;">
+                                        <span class="text-gray-700">Nómina y Recursos Humanos</span>
+                                    </label>
+                                    <label class="flex items-center">
+                                        <input type="checkbox" name="servicios" value="Consultoría Estratégica" class="mr-3 w-5 h-5" style="accent-color: #eee027;">
+                                        <span class="text-gray-700">Consultoría Estratégica</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-gray-700 font-semibold mb-2">Número aproximado de empleados</label>
+                                <select name="empleados" class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-yellow-400 transition duration-300" title="Número de empleados">
+                                    <option value="">Selecciona...</option>
+                                    <option value="Solo yo">Solo yo</option>
+                                    <option value="1-5 empleados">1-5 empleados</option>
+                                    <option value="6-15 empleados">6-15 empleados</option>
+                                    <option value="16-50 empleados">16-50 empleados</option>
+                                    <option value="Más de 50 empleados">Más de 50 empleados</option>
+                                </select>
+                            </div>
+                            
+                            <div>
+                                <label class="block text-gray-700 font-semibold mb-2">Comentarios adicionales</label>
+                                <textarea name="comentarios" rows="4" class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-yellow-400 transition duration-300" placeholder="Cuéntanos más sobre tus necesidades específicas..."></textarea>
                             </div>
                             
                             <button type="submit" class="w-full text-black px-8 py-4 rounded-lg hover:shadow-2xl transition duration-500 font-bold text-lg tracking-wide uppercase transform hover:scale-105" style="background: linear-gradient(135deg, #eee027 0%, #f9f785 100%);">
                                 <i class="fas fa-paper-plane mr-2"></i>
-                                SOLICITAR COTIZACIÓN PERSONALIZADA
+                                SOLICITAR COTIZACIÓN
                             </button>
                             
                             <p class="text-center text-sm text-gray-500 mt-4">
                                 <i class="fas fa-clock mr-1"></i>
-                                Respuesta garantizada en menos de 24 horas
+                                Respuesta en menos de 24 horas
                             </p>
                         </form>
                         
@@ -1179,65 +1076,28 @@ Enviado desde www.ph-asesoria.com
                     `.trim();
                 } else if (formId === 'quote-form') {
                     const serviciosSeleccionados = data.servicios || 'Ninguno seleccionado';
-                    const planSeleccionado = data.plan || 'No especificado';
                     
                     emailBody = `
-SOLICITUD DE COTIZACIÓN PERSONALIZADA - PH ASESORÍA CONTABLE-FISCAL
+SOLICITUD DE COTIZACIÓN - PH ASESORÍA CONTABLE-FISCAL
 
 === INFORMACIÓN DE CONTACTO ===
 Nombre completo: ${data.nombre || 'No especificado'}
 Email: ${data.email || 'No especificado'}
 Teléfono: ${data.telefono || 'No especificado'}
+Empresa: ${data.empresa || 'No especificado'}
 
-=== INFORMACIÓN DE LA EMPRESA ===
-Nombre de la empresa: ${data.empresa || 'No especificado'}
+=== INFORMACIÓN ADICIONAL ===
 Tipo de persona: ${data.tipo_persona || 'No especificado'}
-Número de empleados: ${data.empleados || 'No aplica / Solo yo'}
-Actividad principal: ${data.actividad || 'No especificado'}
+Número de empleados: ${data.empleados || 'No especificado'}
 
 === SERVICIOS SOLICITADOS ===
 Servicios de interés: ${serviciosSeleccionados}
 
-Plan mensual preferido: ${planSeleccionado}
-
 === COMENTARIOS ADICIONALES ===
-${data.detalles || 'Sin comentarios adicionales'}
-
-=== SERVICIOS DETALLADOS DISPONIBLES ===
-A) Contabilidad Administrativa:
-   • Clasificación y captura de facturación emitida y recibida
-   • Clasificación correcta de activos tangibles e intangibles
-   • Conciliación bancaria mensual
-   • Cierre contable y depuración de cuentas
-   • Estados financieros (balance, resultado, flujo de efectivo)
-   ✓ Beneficio: Visión clara de tu salud financiera
-
-B) Consultoría Fiscal:
-   • Declaraciones provisionales y anuales
-   • Planeación fiscal personalizada
-   • Asesoría en facturación electrónica
-   • Atención de revisiones SAT
-   ✓ Beneficio: Optimiza tu carga fiscal y evita sanciones
-
-C) Nómina y Recursos Humanos:
-   • Cálculo de nómina e IMSS/INFONAVIT
-   • PTU, reparto de utilidades
-   • Alta/baja de empleados, finiquitos
-   ✓ Beneficio: Gestión integral de personal
-
-=== PLANES MENSUALES ===
-• Plan Básico: Ideal para Freelancers/Personas físicas | Incluye: Contabilidad + declaración
-• Plan PyME: Ideal para Empresas medianas | Incluye: Todo lo anterior + nómina + asesoría fiscal
-• Plan Premium: Ideal para Empresas más complejas | Incluye: Paquete PyME + consultoría estratégica mensual
-
-=== VALOR AGREGADO GRATIS ===
-✓ Reportes trimestrales de desempeño
-✓ Asesorías telefónicas ilimitadas
-✓ Alertas de fechas SAT vía WhatsApp/email
+${data.comentarios || 'Sin comentarios adicionales'}
 
 ---
 Enviado desde www.ph-asesoria.com
-Respuesta garantizada en menos de 24 horas
                     `.trim();
                 }
                 
